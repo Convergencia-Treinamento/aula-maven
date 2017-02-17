@@ -3,6 +3,7 @@ package io.convergencia.aulamaven;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 public class ExemploSelect {
@@ -19,11 +20,9 @@ public class ExemploSelect {
 				System.out.printf("%5d %-20s %-20s%n", rs.getInt("id"), rs.getString("nome"), rs.getString("telefone"));
 			}
 			
-		} catch (Exception e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
-		
 	}
 	
 	
