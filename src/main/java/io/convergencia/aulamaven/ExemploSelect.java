@@ -16,7 +16,7 @@ public class ExemploSelect {
 			Statement stmt = con.createStatement();
 			ResultSet rs = stmt.executeQuery("select * from contato");
 			while(rs.next()){
-				System.out.printf("%5d %-20s %-20s\n", rs.getInt("id"), rs.getString("nome"), rs.getString("telefone"));
+				System.out.printf("%5d %-20s %-20s%n", rs.getInt("id"), rs.getString("nome"), rs.getString("telefone"));
 			}
 			
 		} catch (Exception e) {
